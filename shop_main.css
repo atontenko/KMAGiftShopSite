@@ -1,12 +1,14 @@
 body {
     font-family: Courier New, monospace;
     color: #454545;
-    background-image: url("media/3-camp-naukma.jpg");
+    background-image: url("media/3-camp-naukma2.jpg");
     background-repeat: repeat;
     background-position: center center;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .panel{
@@ -20,6 +22,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    z-index: 2;
 }
 
 .label{
@@ -79,36 +82,64 @@ body {
 }
 
 .container{
-    padding-top: 92px;
-    height: auto;
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
     background: rgba(255, 255, 255, 0.9);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
+    bottom: 0;
+    position: relative;
 }
+
+.shop-header{
+    padding-top:100px;
+    width: 90%;
+    margin-left: 5%;
+    height: 60px;
+    background: rgba(66,84,168, 1);
+    color: white;
+    font-size: 40px;
+}
+.category-name{
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 5px;
+}
+
 .side-panel{
     width: 20%;
+    height: 100%;
+    border-right: 1px solid #b4b4b4;
+    background: rgba(238, 238, 238, 0.5);
+    position: absolute;
+}
+
+.side-panel-son{
+    position: sticky;
+    top:100px;
+    bottom:150px;
 }
 
 .categories{
-    width: 200px;
+    width: 100%;
     font-size: 20px;
-    border-right: 1px solid #b4b4b4;
-    padding-left: 10px;
+    height: 70%;
 }
 
 .category{
-    padding-top: 15px;
-    padding-left: 5px;
-    border-bottom: 1px solid #b4b4b4;
+    padding: 10px 0 10px 15px;
+    font-weight: 700;
+    border-bottom: 1px solid  rgba(144, 186, 228, 0.5);
+    border-top: 1px solid  rgba(144, 186, 228, 0.5);
 }
-
+.category:hover{
+    background: #eceeec;
+}
 .sub-category{
-    padding-top: 5px;
-    padding-left: 15px;
-    background: rgba(238, 238, 238, 0.5);
-    border-bottom: 1px solid #b2b2b2;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 25px;
 }
 
 .products-list{
@@ -117,11 +148,12 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 0 2% 2%;
-    width: 50%;
+    width: 80%;
+    padding-left: 20%;
 }
 
 .product{
-    width: 25%;
+    width: 30%;
     background: white;
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -129,8 +161,35 @@ body {
     padding: 10px;
     margin-top: 20px;
 }
-.product-image{
+.product-image {
     width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+.product-image:hover{
+    transform: scale(1.05);
+    border-radius: 3px;
+}
+.product-image:active{
+    transform: scale(2.5);
+    border-radius: 3px;
+}
+
+.product-name{
+    padding-top: 10px;
+    height: 45px;
+    font-family: Snell Roundhand,Georgia, cursive;
+    font-size: 20px;
+    font-style: italic;
+}
+.product-price{
+    font-family: Snell Roundhand,Georgia, cursive;
+}
+
+.contacts{
+    width: 90%;
+    margin-left: 5%;
+    height: 150px;
+    background: rgba(66,84,168, 1);
 }
 
 @media (max-width: 950px) {
