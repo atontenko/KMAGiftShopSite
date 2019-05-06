@@ -78,10 +78,17 @@ body {
     height: 18.8px;
 }
 
+<!--                     -->
+
 .container{
     padding-top:100px;
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .main-label{
@@ -122,14 +129,16 @@ body {
     margin-bottom: 20px;
 }
 
+<!--                     -->
+
 .special-offers-parent{
     width: 100%;
-    height: 600px;
     background: white;
     text-align: center;
     padding-top: 10px;
     font-size: 30px;
     min-width: 395px;
+    padding-bottom: 60px;
 }
 
 .special-offers{
@@ -145,7 +154,7 @@ body {
     background: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     transition: all 0.4s ease-in-out;
-    font-family: Book Antiqua, italic, serif;
+    font-family: Snell Roundhand,Georgia, cursive;
     font-size: 80%;
     vertical-align: center;
 }
@@ -164,7 +173,76 @@ body {
     padding-top: 10px;
     height: 45px;
     font-family: Snell Roundhand,Georgia, cursive;
-    font-style: italic;
+}
+
+<!--                     -->
+
+.about-us{
+    background-image: url("media/about-us-img.jpg");
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    min-width: 395px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    color: white;
+    height: 500px;
+}
+
+.about-us-son{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.about-us-top{
+    margin-left: 10%;
+    width: 80%;
+    font-size: large;
+    background: rgba(255,255,255,0.85);
+    border-radius: 3px;
+    height: auto;
+    padding: 15px;
+    color: #454545;
+    transition: all 0.2s ease-in-out;
+}
+.about-us-top:hover{
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.about-us-bottom{
+    margin-left: 10%;
+    width: 80%;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+.right-text{
+    min-width: 159px;
+    padding: 15px;
+    width: 20%;
+    color: #454545;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.85);
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+.right-text:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+<!--                     -->
+
+.contacts{
+    width: 90%;
+    margin-left: 5%;
+    height: 150px;
+    background: rgba(66,84,168, 1);
 }
 
 
@@ -220,5 +298,17 @@ body {
 
     .spec-of-description{
         display: none;
+    }
+
+    .about-us-bottom{
+        width: 80%;
+        margin-left: 10%;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 10px;
+        height: auto;
+    }
+    .right-text{
+        width: 100%;
     }
 }
